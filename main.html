@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Basic -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Mobile Metas -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Site Metas -->
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <style>
+    <style>
+/* Center the loader */
+body {
+  background: #333;
+}
+
+.loader {
+  position:absolute;
+    width:50px;
+    height:50px;
+    margin : -50px;
+    animation:infinite-spinning 2s infinite;
+    animation-timing-function:linear;
+    transform-origin:150% 170%;
+}
+
+@keyframes infinite-spinning {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -100px;
+  width: 200px;
+  height: 200px;
+  background: #c7cbd0;
+  border-radius: 50%;
+  box-shadow: inset -25px 0px 0 0px #9098a1;
+  transition: transform 0.2s ease-in-out;
+}
+
+.moon:hover {
+  transform: scale(1.2);
+}
+
+li {
+  position: absolute;
+  list-style: none;
+  background: #737277;
+  border-radius: 50%;
+}
+li:nth-child(1) {
+  left: 25px;
+  top: 60px;
+  width: 50px;
+  height: 50px;
+  box-shadow: inset 6px -2px 0 0px #414043;
+}
+li:nth-child(2) {
+  left: 150px;
+  top: 50px;
+  width: 25px;
+  height: 25px;
+  box-shadow: inset 3px -1px 0 0px #414043;
+}
+
+li:nth-child(3) {
+  left: 100px;
+  top: 150px;
+  width: 25px;
+  height: 25px;
+  box-shadow: inset 3px -1px 0 0px #414043;
+}
+
+li:nth-child(4) {
+  left: 50px;
+  top: 150px;
+  width: 12.5px;
+  height: 12.5px;
+  box-shadow: inset 2.4px -0.8px 0 0px #414043;
+}
+
+li:nth-child(5) {
+  left: 87.5px;
+  top: 16.66666667px;
+  width: 12.5px;
+  height: 12.5px;
+  box-shadow: inset 2.4px -0.8px 0 0px #414043;
+}
+
+li:nth-child(6) {
+  left: 114.28571429px;
+  top: 80px;
+  width: 12.5px;
+  height: 12.5px;
+  box-shadow: inset 2.4px -0.8px 0 0px #414043;
+}
+
+li:nth-child(7) {
+  left: 181.81818182px;
+  top: 100px;
+  width: 12.5px;
+  height: 12.5px;
+  box-shadow: inset 2.4px -0.8px 0 0px #414043;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 } 
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom { 
+  from{ bottom:-100px; opacity:0 } 
+  to{ bottom:0; opacity:1 }
+}
+
+#myDiv {
+  display: none;
+  text-align: center;
+}
+</style>
+    </style>
+    <style>
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #22252c; 
+
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+</style>
+    <title>Fly Downloader</title>
+
+    <!-- slider stylesheet -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css"
+    />
+
+    <!-- bootstrap core css -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <link rel="icon" type="image/ico" href="images/128.png" />
+
+    <!-- fonts style -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins|Raleway:400,600|Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet" />
+    <!-- responsive style -->
+    <link href="css/responsive.css" rel="stylesheet" />
+    <script>
+var myVar;
+
+function myFunction() {
+  myVar = setTimeout(showPage, 1);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("about1").style = "display: block; background-color: rgb(22, 22, 22); margin-top: 0px; margin-bottom: 0px; padding-top: 0px; padding-bottom: 25px; color: white;"
+  document.getElementById("myDiv").style.display = "block";
+}
+</script>
+  </head>
+
+  <body onload="myFunction()" style="margin:0;">
+    <!-- Load Facebook SDK for JavaScript -->
+    <!-- Load Facebook SDK for JavaScript -->
+    <div id="loader">
+    <img src="http://icons.iconarchive.com/icons/google/noto-emoji-travel-places/512/42598-rocket-icon.png" style="width:100px;height:90px;" class="loader">
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+<div style="display:none;" id="myDiv" class="animate-bottom">
+    <div id="fb-root"></div>
+      <script>
+        window.fbAsyncInit = function() {
+          FB.init({
+            xfbml            : true,
+            version          : 'v6.0'
+          });
+        };
+
+        (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/ar_AR/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));</script>
+
+      <!-- Your customer chat code -->
+      <div class="fb-customerchat"
+        attribution=setup_tool
+        page_id="105383761120465"
+  theme_color="#0084ff"
+  logged_in_greeting="اذا واجهتك مشاكل راسلنا لمساعدتك ^_^ ؟ "
+  logged_out_greeting="اذا واجهتك مشاكل راسلنا لمساعدتك ^_^ ؟ ">
+      </div>
+    <div class="hero_area">
+   
+      <header class="header_section">
+        <div class="container-fluid">
+          <nav class="navbar navbar-expand-lg custom_nav-container">
+            <img src="images/128.png">
+            <a class="navbar-brand" href="index.html">
+              <span>
+                Fly Downloader
+              </span>
+            </a>
+
+            
+          </nav>
+        </div>
+      </header>
+      <!-- end header section -->
+      <!-- slider section -->
+      <section class=" slider_section position-relative">
+        <div class="container">
+          <div
+            id="carouselExampleControls"
+            class="carousel slide"
+            data-ride="carousel"
+          >
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="slider_item-box">
+                  <div class="slider_item-container">
+                    <div class="slider_item-detail">
+                      <h1>
+                        تمتع بتحميل الملفات بسرعة عالية 
+                      </h1>
+                      <p>
+                      </p>
+                      <a href="#Download"> <button style="--content: 'Download';">
+                        
+                  <div class="left"></div>
+                  Download
+                  <div class="right"></div>
+              </button></a>
+                     
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="slider_item-box">
+                  <div class="slider_item-container">
+                    <div class="slider_item-detail">
+                      <h1>
+                        ميزات رائعة في انتظارك 
+                      </h1>
+                      <p>
+                      </p>
+                      <a href="#Download"> <button style="--content: 'Download';">
+                        
+                  <div class="left"></div>
+                  Download
+                  <div class="right"></div>
+              </button></a>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="slider_item-box">
+                  <div class="slider_item-container">
+                    <div class="slider_item-detail">
+                      <h1>
+                        حمله الآن مجاناً
+                      </h1>
+                      <p>
+                        
+                      </p>
+                      <a href="#Download"> <button style="--content: 'Download';">
+                        
+                  <div class="left"></div>
+                  Download
+                  <div class="right"></div>
+              </button></a>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a
+          class="carousel-control-prev"
+          href="#carouselExampleControls"
+          role="button"
+          data-slide="prev"
+        >
+          <span class="sr-only">Previous</span>
+        </a>
+        <a
+          class="carousel-control-next"
+          href="#carouselExampleControls"
+          role="button"
+          data-slide="next"
+        >
+          <span class="sr-only">Next</span>
+        </a>
+      </section>
+      <!-- end slider section -->
+    </div>
+
+
+  
+
+
+    <!-- feature section  -->
+    <section  class="feature_section layout_padding">
+      <div class="container">
+        
+        <STRONG style=" font-size: 50px;
+    color: black;
+    display: block;
+    text-align: center;"> Our Features </STRONG>
+       
+      </div>
+      <div class="">
+        <div class="feature_card-container layout_padding2">
+          <div class="feature_card">
+            <div class="feature_img-container">
+              <div class="feature_img-box">
+                <img src="images/f8.png" alt="" />
+              </div>
+            </div>
+            <div class="feature_detail-box">
+              <h4>
+                روابط متعددة 
+              </h4>
+              <p>
+                 يمكن اضافة مجموعة من الروابط ليتم تحميلها تلقائيا على التتالي 😍
+              </p>
+            </div>
+          </div>
+          <div class="feature_card">
+            <div class="feature_img-container">
+              <div class="feature_img-box">
+                <img src="images/f7.png" alt="" />
+              </div>
+            </div>
+            <div class="feature_detail-box">
+              <h4>
+                الاتصالات المتقطعة
+              </h4>
+              <p>
+                يعالج التطبيق مشاكل بطء الاتصال وانقطاع الشبكة ويستأنف التحميل تلقائيا
+                .. تجني هذه الميزة ثمارها عندما تخلد للنوم وتترك ملفاتك قيد التحميل 😂😂
+              </p>
+            </div>
+          </div>
+          <div class="feature_card">
+            <div class="feature_img-container">
+              <div class="feature_img-box">
+                <img src="images/f6.png" alt="" />
+              </div>
+            </div>
+            <div class="feature_detail-box">
+              <h4>
+                خيارات التحميل
+              </h4>
+              <p>
+                تستطيع ايقاف التحميل و وضعه في قائمة التحميل لاحقا .. ويمكن ايقاف التحميل مؤقتا واستئنافه .. وتحديد سرعة التحميل 
+              </p>
+            </div>
+          </div>
+          <div class="feature_card">
+            <div class="feature_img-container">
+              <div class="feature_img-box">
+                <img src="images/f5.png" alt="" />
+              </div>
+            </div>
+            <div class="feature_detail-box">
+              <h4>
+               سرعة التحميل
+              </h4>
+              <p>
+                يستخدم التطبيق افضل خوارزميات التحميل وتقسيم السرعات لاستغلال سرعة الانترنت كاملة للوصول لاعلى سرعة تحميل 
+                .. يجري التحميل على اكثر من خط اتصال هذا يدعم اصحاب السرعات البطيئة لتسريع تحميل ملفاتهم
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="">
+        <div class="feature_card-container layout_padding2">
+          <div class="feature_card">
+            <div class="feature_img-container">
+              <div class="feature_img-box">
+                <img src="images/f1.png" alt="" />
+              </div>
+            </div>
+            <div class="feature_detail-box">
+              <h4>
+                المشاهدة اثناء التحميل 
+              </h4>
+              <p>
+                لا داعي لانتظار التحميل لينتهي .. يمكنك مشاهدة مقاطع الفيديو اثناء التحميل  😎 قم بتفعيل هذه الميزة ثم اضغط على رابط التحميل  .. عند استخدام هذه الميزة تعتمد <strong style="color : red;"> سرعة التحميل</strong> على سيرفر التحميل وكفاءة الاتصال وتختلف السرعة من وقت لاخر<br> 🥺🥺
+              </p>
+            </div>
+          </div>
+          <div class="feature_card">
+            <div class="feature_img-container">
+              <div class="feature_img-box">
+                <img src="images/f2.png" alt="" />
+              </div>
+            </div>
+            <div class="feature_detail-box">
+              <h4>
+                اليوتيوب والفيسبوك
+              </h4>
+              <p>
+                يمكن من خلال اضافة كروم تحميل مقاطع الفيديو والصوتيات من اليوتيوب وتحميل <strong style="color : green;"> قوائم التشغيل </strong> بدقة عالية .. يمكن تحميل <strong style="color : green;"> ترجمة الفيديو </strong>  بجميع اللغات , تستطيع من خلال اضافة كروم تحميل مقاطع الفيسبوك ايضا بضغطة واحدة
+              </p>
+            </div>
+          </div>
+          <div class="feature_card">
+            <div class="feature_img-container">
+              <div class="feature_img-box">
+                <img src="images/f3.png" alt="" />
+              </div>
+            </div>
+            <div class="feature_detail-box">
+              <h4>
+                البرامج والتطبيقات
+              </h4>
+              <p>
+                يحتوي التطبيق على اكثر من <strong style="color : green;">10,000</strong> رابط تحميل مباشر لاشهر برامج الاندرويد واكثر من <strong style="color : green;">6000</strong> رابط لبرامج الويندوز يمكن تحميل اخر اصداراتها بضغطة واحدة
+              </p>
+            </div>
+          </div>
+          <div class="feature_card">
+            <div class="feature_img-container">
+              <div class="feature_img-box">
+                <img src="images/f4.png" alt="" />
+              </div>
+            </div>
+            <div class="feature_detail-box">
+              <h4>
+                التحميل من درايف ودروبوكس
+              </h4>
+              <p>
+                يمكنك تحميل ملفاتك مباشرة من هذه المواقع .. فقط قم بنسخ الرابط القابل للمشاركة لملفك وسيبدأ التحميل تلقائياً
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <!-- about section -->
+
+    <section id="Download" class="about_section layout_padding">
+       <STRONG style=" font-size: 50px;
+    color: black;
+    display: block;
+    text-align: center;"> Downloads </STRONG>
+      <div class="container">
+        <h2 class="text-uppercase">
+          
+        </h2>
+      </div>
+
+      <div class="container">
+        <div class="about_card-container layout_padding2-top">
+          <div class="about_card">
+            <div class="about-detail">
+              <div class="about_img-container">
+                <div class="about_img-box">
+                  <img src="images/work1.png" alt="" />
+                </div>
+              </div>
+              <div class="card_detail-ox">
+                <h4>
+                  Windwos 10/7/Vista/XP
+                  <br>
+                  جاهز للتحميل
+                </h4>
+                <a href="https://www.dropbox.com/s/v6cjxq6obvmt4e5/FlySetup%201.0.0.exe?dl=1"> <button style="--content: 'Download';">
+                        
+                  <div class="left"></div>
+                  Download
+                  <div class="right"></div>
+              </button></a>
+              </div>
+            </div>
+          </div>
+          <div class="about_card">
+            <div class="about-detail">
+              <div class="about_img-container">
+                <div class="about_img-box">
+                  <img src="images/work2.png" alt="" />
+                </div>
+              </div>
+              <div class="card_detail-ox">
+                <h4>
+                  Linux
+                  <br>
+                  سوف يتوفر قريباً
+                </h4>
+                <a href="#Download"> <button style="--content: 'Download';">
+                        
+                  <div class="left"></div>
+                  Download
+                  <div class="right"></div>
+              </button></a>
+
+              </div>
+            </div>
+          </div>
+          <div class="about_card">
+            <div class="about-detail">
+              <div class="about_img-container">
+                <div class="about_img-box">
+                  <img src="images/work3.png" alt="" />
+                </div>
+              </div>
+              <div class="card_detail-ox">
+                <h4>
+                  Android
+                  <br>
+                  سوف يتوفر قريباً
+                </h4>
+
+                <a href="#Download"> <button style="--content: 'Download';">
+                        
+                  <div class="left"></div>
+                  Download
+                  <div class="right"></div>
+              </button></a>
+              
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="who_section">
+      <div class="container who_container">
+        <div class="who_img-box">
+          <img src="images/youtube.png" alt="" />
+        </div>
+        <div class="who_deail-box">
+          <h2>
+           Fly Downloader Extenstion
+          </h2>
+          <p>
+            توفر الاضافة التفاعل بين البرنامج والمتصفح  .. تلتقط الروابط القابلة للتحميل ليتم تحملها تلقائيا .. كما توفر ازرار تفاعلية لمقاطع اليوتيوب وقوائم التشغيل لتحملها بكل سهولة .. تستطيع ايضا التحميل من الفيسبوك فقط افتح الفيديو في علامة تبويب جديدة وسوف يظهر زر التحميل 
+            <br>
+            <p> <strong style="color : yellow ;"> 🥺🥺 ملاحظة : </strong> لن تعمل كامل الميزات بدون الاضافة </p>
+
+          </p>
+          <a href="https://chrome.google.com/webstore/detail/fly-downloader/enaaafkeglokfibifljablkofagmjeno" target="_blank" ><button style="margin: 5px;">
+            <img src="http://icons.iconarchive.com/icons/marcus-roberto/google-play/32/Google-Chrome-icon.png">
+                  <div class="left"></div>
+                    Download
+                  <div class="right"></div>
+                  
+              </button></a>
+              <a href="https://addons.mozilla.org/en-US/firefox/addon/flydownloader/" target="_blank" ><button style="margin: 5px;">
+                <img src="http://icons.iconarchive.com/icons/hopstarter/software/32/Mozilla-Firefox-icon.png">
+                  <div class="left"></div>
+                    Download
+                  <div class="right"></div>
+
+              </button></a>
+          
+        </div>
+      </div>
+    </section>
+
+
+  
+
+    <strong style=" font-size: 50px;
+    color: black;
+    display: block;
+    text-align: center;"> Demo </strong>
+    <iframe style="margin-top: 0px; margin-bottom: -7px;" width=100% height="500" margin-top="20px"  src="https://www.youtube.com/embed/rsYCbqkSYzA" frameborder="0" allowfullscreen></iframe>
+    <section class="info_section layout_padding">
+      <h2 style="text-align: center; color : white;"class="text-uppercase">
+          تواصل معنا
+        </h2>
+        <div class="container d-flex justify-content-center">
+        
+        <br>
+         <p style="color : white; text-aling : center;">
+          يمكنك التواصل معنا عبر الايميلات التالية ويمكن متابعة صفحتنا على الفيسبوك لمتابعة اخر التحديثات والميزات الجديدة 
+        </p>
+      </div>
+
+        <div
+          class="d-flex flex-column flex-lg-row justify-content-between align-items-center align-items-lg-baseline"
+        >
+          <div class="social-box">
+            <a href="https://www.facebook.com/FlyDownloader2020" target="_blank" >
+              
+              <img src="images/fb.png" alt="" />
+              FlyDownloader
+            </a>
+
+            <a target="_blank" href="https://www.facebook.com/mohamad.aboazan.12">
+              
+              <img src="images/fb.png" alt=""  />
+              Mohamad AboAzan
+            </a>
+          </div>
+        </div>
+      </div>
+      <center id="about1"  style=" display:none; background-color : #161616; margin-top : 25px; margin-bottom : 25px;padding-top : 25px; padding-bottom : 25px; color : white; text-aling : center;">
+          FlyDownloader2020@gmail.com
+          <br>
+          MohamadAboAzan963@gmail.com 
+          <br>
+          Fly Downloader © 2020
+        </center>
+    </section>
+</div>
+      
+
+    
+
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+
+    <script>
+      function openNav() {
+        document.getElementById("myNav").classList.toggle("menu_width");
+        document
+          .querySelector(".custom_menu-btn")
+          .classList.toggle("menu_btn-style");
+      }
+    </script>
+
+  </body>
+</html>
